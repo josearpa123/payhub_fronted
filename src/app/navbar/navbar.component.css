@@ -1,0 +1,233 @@
+  /* Estilos para la barra de navegación */
+  .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 50px;
+      background-color: #ffffff;
+      box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1000; /* Asegura que la barra de navegación esté al frente */
+    }
+    
+    /* Logo alineado a la izquierda */
+    .logo img {
+      height: 80px;
+    }
+    
+    /* Enlaces de navegación */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      gap: 30px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+    }
+    
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+      padding: 8px 12px;
+      list-style: none;
+      display: flex;
+    }
+    
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #007bff;
+    }
+    
+    /* Login y Get Started alineados a la derecha */
+    #login-getstarted {
+      display: flex;
+      margin-left: auto; /* Empuja el div al final */
+      align-items: center;
+    }
+    
+    #login-getstarted ul {
+      display: flex;
+      gap: 20px; /* Espaciado entre los botones */
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    
+    #login-getstarted li {
+      list-style: none;
+    }
+    
+    #login-getstarted a {
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    
+    #login-getstarted #login a {
+      background-color: #007bff; /* Color del botón de Login */
+      color: white;
+    }
+    
+    #login-getstarted #login a:hover {
+      background-color: #0056b3; /* Color del botón de Login al pasar el ratón */
+    }
+    
+    #login-getstarted #getstarted a {
+      background-color: #ffd105; /* Color del botón de Get started */
+      color: white;
+    }
+    
+    #login-getstarted #getstarted a:hover {
+      background-color: #ffd105; /* Color del botón de Get started al pasar el ratón */
+    }
+    
+    /* Menú hamburguesa (inicialmente oculto) */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      cursor: pointer;
+    }
+    
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #333;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+    
+    /* Overlay para fondo oscuro cuando el menú está abierto */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 998;
+    }
+    
+    .overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    body.no-scroll {
+      overflow: hidden;
+    }
+    
+    /* Media queries para hacer el menú responsive */
+    @media (max-width: 992px) {
+      .navbar {
+          padding: 15px 30px;
+      }
+      
+      .nav-links {
+          gap: 15px;
+      }
+      
+      .logo img {
+          height: 70px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .menu-toggle {
+          display: flex;
+          z-index: 1000;
+      }
+      
+      .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 70%;
+          height: 100vh;
+          flex-direction: column;
+          background-color: white;
+          padding: 80px 20px 20px;
+          transition: all 0.3s ease-in-out;
+          z-index: 999;
+          justify-content: flex-start;
+          align-items: center;
+      }
+      
+      .nav-links.active {
+          right: 0;
+      }
+      
+      #login-getstarted {
+          position: fixed;
+          bottom: 20px;
+          right: -100%;
+          width: 70%;
+          justify-content: center;
+          transition: all 0.3s ease-in-out;
+          z-index: 999;
+      }
+      
+      #login-getstarted.active {
+          right: 0;
+      }
+      
+      /* Animación del menú hamburguesa cuando está activo */
+      .menu-toggle.active span:nth-child(1) {
+          transform: translateY(9px) rotate(45deg);
+      }
+      
+      .menu-toggle.active span:nth-child(2) {
+          opacity: 0;
+      }
+      
+      .menu-toggle.active span:nth-child(3) {
+          transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .navbar {
+          padding: 15px 20px;
+      }
+      
+      .logo img {
+          height: 60px;
+      }
+      
+      .nav-links {
+          width: 80%;
+          padding: 80px 10px 20px;
+      }
+      
+      #login-getstarted {
+          width: 80%;
+          flex-direction: column;
+          align-items: center;
+      }
+      
+      #login-getstarted ul {
+          flex-direction: column;
+          width: 100%;
+          gap: 10px;
+      }
+      
+      #login-getstarted li {
+          width: 100%;
+      }
+      
+      #login-getstarted a {
+          display: block;
+          text-align: center;
+      }
+    }

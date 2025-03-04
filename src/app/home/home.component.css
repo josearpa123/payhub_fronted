@@ -1,0 +1,301 @@
+/* Estilos generales */
+/* Elimina márgenes y padding predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Previene desbordamiento lateral */
+}
+
+/* Secciones */
+section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Hero */
+#hero {
+    background: linear-gradient(to right, #05356a, #ffd105);
+    color: white;
+    padding: 100px 20px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#hero h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+#hero p {
+    font-size: 1rem;
+    margin: 20px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#hero button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Features */
+.features {
+    background: linear-gradient(to right, #007bff, #ffd105);
+    padding: 50px 20px; /* Ajusta según necesidad */
+    color: white; /* Asegura buen contraste */
+}
+
+.feature {
+    display: inline-block;
+    width: 22%;
+    margin: 20px 2%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+    width: 80px;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.feature p {
+    font-size: 0.9rem;
+}
+
+/* Benefits */
+#benefits {
+    background: #f1f1f1;
+}
+
+.benefit {
+    display: inline-block;
+    width: 22%;
+    margin: 20px 2%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.benefit img {
+    width: 80px;
+}
+
+.benefit h3 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.benefit p {
+    font-size: 0.9rem;
+}
+
+/* How It Works */
+#how-it-works {
+    background: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Contenedor flexible */
+.how-it-works-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Diseño de cada cuadro */
+.how-it-works-step {
+    position: relative;
+    width: 200px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.how-it-works-step img {
+    width: 80px;
+}
+
+.how-it-works-step h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.how-it-works-step p {
+    font-size: 0.9rem;
+}
+
+/* Flechas automáticas (por defecto apuntan a la derecha) */
+.arrow {
+    width: 30px;
+    height: 30px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>') no-repeat center;
+    background-size: contain;
+    transform: rotate(270deg); /* Flechas a la derecha en PC */
+}
+
+/* Call to Action */
+#cta {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    padding: 80px 20px;
+}
+
+#cta h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#cta p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+#cta button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cta button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+/* Media Queries para Responsive */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .feature, .benefit {
+        width: 45%;
+        margin: 15px 2%;
+    }
+    
+    .how-it-works-step {
+        width: 180px;
+    }
+    
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    #hero h2 {
+        font-size: 1.3rem;
+    }
+    
+    #cta h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Dispositivos móviles grandes */
+@media (max-width: 768px) {
+    .how-it-works-container {
+        flex-direction: column;
+    }
+    
+    .arrow {
+        transform: rotate(0deg); /* Flechas hacia abajo en móviles */
+        margin: 5px auto;
+    }
+    
+    #hero {
+        padding: 70px 15px;
+    }
+    
+    #hero h1 {
+        font-size: 2rem;
+    }
+    
+    #hero p {
+        font-size: 0.95rem;
+    }
+    
+    #cta {
+        padding: 60px 15px;
+    }
+    
+    #cta p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Dispositivos móviles pequeños */
+@media (max-width: 576px) {
+    .feature, .benefit {
+        width: 90%;
+        margin: 15px auto;
+    }
+    
+    .how-it-works-step {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    #hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    #hero button, #cta button {
+        width: 90%;
+        max-width: 250px;
+        margin: 10px auto;
+        display: block;
+    }
+    
+    #cta h2 {
+        font-size: 1.6rem;
+    }
+    
+    section {
+        padding: 40px 15px;
+    }
+}
