@@ -24,7 +24,8 @@
   
   /* Hero Section con Efecto Parallax Suave */
   #hero {
-    background : rgba(255, 255, 255, 0.42);    color: black;
+    background :linear-gradient(to top, #ffffff 0%, #ffcc00 100%);  
+      color: black;
     position: relative;
     overflow: hidden;
     padding: 120px 20px;
@@ -77,7 +78,7 @@
   
   /* About Us Section con Efecto de Elevación */
   #aboutus {
-    background: linear-gradient(to right, #4c7ab5, #dac933);
+    background :white;
     padding: 80px 20px;
     text-align: center;
   
@@ -110,7 +111,7 @@
   
   /* Software Section con Tarjetas Modernas */
   #our_software {
-    background: var(--gradient-yellow);
+    background: linear-gradient(to top, #1e3a5f 0%, #ffffff 100%);
     padding: 80px 20px;
     text-align: center;
   
