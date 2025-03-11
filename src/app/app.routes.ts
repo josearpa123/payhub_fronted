@@ -10,7 +10,7 @@ import { PreciosComponent } from './precios/precios.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import path from 'path';
 import { FooterComponent } from './footer/footer.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactoComponent } from './contact/contact.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -22,6 +22,6 @@ export const routes: Routes = [
   {path: 'precios', component: PreciosComponent},
   {path: 'navbar', component: NavbarComponent},
   {path: 'footer', component: FooterComponent},
-  {path: 'contact', component: ContactComponent},
+  {path: 'contact', component: ContactoComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}, // Ruta por defecto
 ];
